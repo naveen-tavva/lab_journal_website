@@ -4,10 +4,15 @@ date: "May 02, 2020"
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+chooseCRANmirror(graphics=FALSE, ind=1)
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 # Example
 
 To explore the basic data manipulation verbs of dplyr, we’ll use nycflights13::flights. This data frame contains all 336,776 flights that departed from New York City in 2013. The data comes from the US Bureau of Transportation Statistics, and is documented in ?flights.
+
 
 ```{r, message=FALSE}
 if (!require(nycflights13)) {
@@ -24,5 +29,7 @@ flights
 ```{r}
 filter(flights, month == 1, day == 1)
 ```
+```
 
 ...
+```
